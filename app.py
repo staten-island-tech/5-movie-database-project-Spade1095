@@ -21,9 +21,43 @@ def beforeAndAfterYear():
             print(i["title"])
 
 def year():
-    year = int(input("From what year do you want tp see moveis from? "))
+    year = int(input("From what year do you want to see moveis from? "))
     for i in (data):
         if i["year"] == year:
             print(i["title"])
+
+def beforeYear():
+    year = int(input("Movies before what year do you want to view? "))
+    for i in (data):
+        if i["year"] < year:
+            print(i["title"])
+
+def afterYear():
+    year = int(input("Movies after what year do you want to view? "))
+    for i in (data):
+        if i["year"] > year:
+            print(i["title"])
+def genre():
+    genre = input("What genre do you want to search for? ")
+    for i in (data):
+        if genre in i["genres"]:
+            print(i["title"])
+
+def all():
+    sortType = input("Do you want to search for movies on a specific year (say 'year'), before a year (say 'before'), after a year (say 'after'), or a specific genre (say genre') ")
+    if sortType == "year":
+        year()
+    elif sortType == "before":
+        beforeYear()
+    elif sortType == "after":
+        afterYear()
+    elif sortType == "genre":
+        genre()
+    else:
+        print("invalid input stupid")
+all()
+
+
+
 
 
