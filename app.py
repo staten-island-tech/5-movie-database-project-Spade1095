@@ -56,8 +56,3 @@ def all():
     else:
         print("invalid input stupid")
 all()
-
-
-
-
-
